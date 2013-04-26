@@ -1,12 +1,10 @@
-module ActionView
-  module Partials
-    def render_partial_with_explanation(*args) 
-      start_explanation = "\n<!-- START PARTIAL #{args[0]} -->\n"
-      end_explanation = "\n<!-- END PARTIAL #{args[0]} -->\n"
-      start_explanation + render_partial_without_explanation(*args).to_s + end_explanation
-    end
+class ActionView::PartialRenderer
+	alias_method :_render_original, :render
 
-    alias_method_chain :render_partial,:explanation     
+  def render(context, options, block)
+  	partial = options[:partial]
+    start_explanation = "\n<!-- START PARTIAL #{partial} -->\n".html_safe
+    end_explanation = "\n<!-- END PARTIAL #{partial} -->\n".html_safe
+    (start_explanation + _render_original(context, options, block).to_s + end_explanation)
   end
 end
- 
