@@ -1,0 +1,28 @@
+## Transforms dev html from this
+
+    <foo>
+      <bar>baz</bar>
+    </foo>
+
+into this...
+
+    <!-- BEGIN /path/to/foo.html.erb -->
+    <foo>
+      <bar>baz</bar>
+    </foo>
+    <!-- END /path/to/foo.html.erb -->
+
+when in development mode.
+
+
+Place in the development section of your gem file to add html comments at the start and end of partial rendering, so you can see which partial is creating the HTML code you're interested in.
+
+## WARNING: THIS IS FOR RAILS 3.0.x ONLY
+See <https://github.com/gwshaw/noisy_partials> for a 3.1+ compatibile version
+
+group :development do
+  gem 'noisy_partials', git: 'git://github.com/masukomi/noisy_partials.git'
+end
+
+Originally by Gwyn Morfey (2008), adapted to Rails 3.1 by George Shaw (2013)
+and backported to Rails 3.0 by masukomi (2013)

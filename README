@@ -1,7 +1,0 @@
-Place in the development section of your gem file to add html comments at the start and end of partial rendering, so you can see which partial is creating the HTML code you're interested in.
-
-group :development do
-  gem 'noisy_partials', git: 'git://github.com/gwshaw/noisy_partials.git'
-end
-
-Originally by Gwyn Morfey (2008), adapted to Rails 3 by George Shaw (2013)
