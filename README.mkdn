@@ -20,9 +20,11 @@ Place in the development section of your gem file to add html comments at the st
 ## WARNING: THIS IS FOR RAILS 3.0.x ONLY
 See <https://github.com/gwshaw/noisy_partials> for a 3.1+ compatibile version
 
-group :development do
-  gem 'noisy_partials', git: 'git://github.com/masukomi/noisy_partials.git'
-end
+Install with:
+
+    group :development do
+      gem "noisy_partials_for_rails_3"
+    end
 
 Originally by Gwyn Morfey (2008), adapted to Rails 3.1 by George Shaw (2013)
 and backported to Rails 3.0 by masukomi (2013)
