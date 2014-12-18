@@ -6,17 +6,17 @@ Gem::Specification.new do |s|
   s.description = <<EOF
 Inserts an HTML comment at the beggining and ending of html partials
 with the path to the partial, so that "view vource"
-can tell you exactly what partial is responsible for the piece of 
+can tell you exactly what partial is responsible for the piece of
 HTML you're looking at.
 
 Limited to files ending with .html,.haml,.erb, and .rhtml
-and Rails 3.0.x ONLY. 
+and Rails 3.0.x ONLY.
 See https://github.com/gwshaw/noisy_partials for a 3.1 compatibile version
 EOF
   s.authors     = ["Gwyn Morfey", "George Shaw", "masukomi"]
   s.email       = ['masukomi@masukomi.org']
   s.files       = ["lib/noisy_partials_for_rails_3.rb"]
   s.homepage    = "https://github.com/masukomi/noisy_partials"
-  
-  s.add_dependency "rails", "~> 3.0.0"
+
+  s.add_dependency "rails", "~> 4.0.0"
 end
